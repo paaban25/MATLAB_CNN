@@ -93,7 +93,7 @@ for j=1: numValItems
     label_val = valLabels(j);
 
     YLabel_val = onehotencode(label_val, 2, 'ClassNames', categories(valLabels));
-    YLabel_val = YLabel_val'
+    YLabel_val = YLabel_val';
 
 
     % Forward pass (Using your convolution function)
