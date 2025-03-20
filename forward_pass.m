@@ -1,6 +1,6 @@
-function prediction = forward_pass(image, filters, stride_conv, pool_size, stride_pool, fc_weights, fc_bias)
+function prediction = forward_pass(image, filters,bias_conv, stride_conv, pool_size, stride_pool, fc_weights, fc_bias)
     % Step 1: Convolution Layer
-    conv_out = convolutional_layer(image, filters, stride_conv);
+    conv_out = convolutional_layer(image, filters,bias_conv, stride_conv);
     
     % Step 2: ReLU Activation
     relu_out = relu_activation(conv_out);

@@ -1,0 +1,11 @@
+testImgPath = "C:\Program Files\MATLAB\R2024a\toolbox\nnet\nndemos\nndatasets\DigitDataset\1\image151.png";
+testImg=imread(testImgPath);
+testImg=im2gray(testImg);
+testImg=double(testImg)/255.0;
+test_conv_out = convolutional_layer(testImg,convWeights,convBiases,stride_conv);
+test_relu_out = relu_activation(test_conv_out);
+test_pooled_out= max_pooling(test_relu_out,ph,pw,stride_pooling);
+test_flattened_out = test_pooled_out (:);
+test_fc_out = fully_connected_layers(test_flattened_out,fcWeights,fcBiases);
+test_prediction=output_layer(test_fc_out);
+test_prediction=

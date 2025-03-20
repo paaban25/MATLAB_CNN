@@ -1,3 +1,4 @@
+
 function image_out = convolutional_layer(image, filter, b_conv, stride)
     % image: (h x w x num_channels)
     % filter: (fh x fw x num_channels x num_filters)

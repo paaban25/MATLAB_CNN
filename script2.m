@@ -80,7 +80,7 @@ for epoch = 1:numEpochs
 end
 
 
-
+%{
 %% 7. Validation
 correct = 0; total = 0;
 valItems = size(augVal.Files);
@@ -116,3 +116,4 @@ for j=1: numValItems
 end
 
 fprintf('Validation Accuracy: %.2f%%\n', (correct / total) * 100);
+%}
